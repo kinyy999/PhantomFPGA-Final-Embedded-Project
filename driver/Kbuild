@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: GPL-2.0
+#
+# PhantomFPGA kernel module Kbuild
+#
+# This file tells the kernel build system which source files
+# to compile for the phantomfpga.ko module.
+
+# Module name (creates phantomfpga.ko)
+obj-m += phantomfpga.o
+
+# Source files for the module (without .c extension)
+# Currently just one file, but you can add more:
+#   phantomfpga-y := phantomfpga_drv.o phantomfpga_debug.o
+phantomfpga-y := phantomfpga_drv.o
+
+# Optional: Extra compiler flags for this module
+# ccflags-y += -DDEBUG
+# ccflags-y += -Werror
